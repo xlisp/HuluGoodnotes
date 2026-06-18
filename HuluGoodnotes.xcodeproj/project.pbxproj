@@ -15,6 +15,7 @@
 		7B53E8FD59E71BA8E0C93F69 /* NoteMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDA2F183846E5194B5947A /* NoteMetadata.swift */; };
 		854D4EE0E4B137EC6E11BEF1 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A643F5751BDC7BE2858CB /* CanvasViewController.swift */; };
 		9962F5261AFDE6C5E9EE91BC /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13992118734C1F604C14FFDE /* OCRService.swift */; };
+		A83C952B6367B8511C45D085 /* StrokeArranger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11776A8652DAAD9E88F9FF3 /* StrokeArranger.swift */; };
 		B56692823701DEA67F182011 /* EditorCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC9D998E2952FD5F15F1AC /* EditorCanvas.swift */; };
 		BBB04784D4B2763BA8F845AC /* HuluGoodnotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D87728C8FA9B2F19BD86E /* HuluGoodnotesApp.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		77FC9D998E2952FD5F15F1AC /* EditorCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCanvas.swift; sourceTree = "<group>"; };
 		A746B52F8F53EFADD87764F6 /* OCRResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultView.swift; sourceTree = "<group>"; };
 		AB84C47B100B22DE1FB84B70 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
+		D11776A8652DAAD9E88F9FF3 /* StrokeArranger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeArranger.swift; sourceTree = "<group>"; };
 		D51D87728C8FA9B2F19BD86E /* HuluGoodnotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuluGoodnotesApp.swift; sourceTree = "<group>"; };
 		EB9A643F5751BDC7BE2858CB /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D51D87728C8FA9B2F19BD86E /* HuluGoodnotesApp.swift */,
+				6A59278C076E3951EBDBF076 /* Arrange */,
 				97576B2D788548A14512ACFB /* Canvas */,
 				06369D7AFB8214C1EB59D69A /* Models */,
 				6C14A0D7D194003FA791BFBC /* OCR */,
@@ -72,6 +75,14 @@
 				22F10E2F4076FBA94AA28831 /* Views */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		6A59278C076E3951EBDBF076 /* Arrange */ = {
+			isa = PBXGroup;
+			children = (
+				D11776A8652DAAD9E88F9FF3 /* StrokeArranger.swift */,
+			);
+			path = Arrange;
 			sourceTree = "<group>";
 		};
 		6C14A0D7D194003FA791BFBC /* OCR */ = {
@@ -174,6 +185,7 @@
 				4A0C70BC06BC38B841A75EF1 /* NoteStore.swift in Sources */,
 				5B75C903662B64C537990FD7 /* OCRResultView.swift in Sources */,
 				9962F5261AFDE6C5E9EE91BC /* OCRService.swift in Sources */,
+				A83C952B6367B8511C45D085 /* StrokeArranger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

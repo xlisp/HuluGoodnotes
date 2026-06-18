@@ -85,6 +85,31 @@ final class CanvasViewController: UIViewController {
         canvasView.drawing = drawing
     }
 
+    /// 自动把当前画布上的手写整理成整齐的行列并适当缩小，可撤销。
+    func tidyDrawing() {
+        let current = canvasView.drawing
+        guard current.strokes.count > 1 else { return }
+
+        let options = StrokeArranger.Options(
+            origin: CGPoint(x: 40, y: 60),
+            maxWidth: max(200, canvasView.bounds.width - 80)
+        )
+        let arranged = StrokeArranger.arrange(current, options: options)
+        // 笔画数量应保持不变；不一致说明出现异常，放弃整理。
+        guard arranged.strokes.count == current.strokes.count else { return }
+
+        applyDrawing(arranged, undo: current)
+    }
+
+    /// 应用新的笔迹，并把反向操作登记到撤销栈（支持撤销 / 重做）。
+    private func applyDrawing(_ newDrawing: PKDrawing, undo oldDrawing: PKDrawing) {
+        canvasView.drawing = newDrawing
+        onDrawingChanged?(newDrawing)
+        undoManager?.registerUndo(withTarget: self) { vc in
+            vc.applyDrawing(oldDrawing, undo: newDrawing)
+        }
+    }
+
     // MARK: - OCR 模式
 
     private func updateOCRMode() {

@@ -10,6 +10,7 @@ struct NoteEditorView: View {
     @State private var isLoaded = false
     @State private var isOCRMode = false
     @State private var showGrid = true
+    @State private var tidyToken = 0
     @State private var isRecognizing = false
     @State private var ocrResult: OCRResult?
     @State private var saveTask: Task<Void, Never>?
@@ -21,6 +22,7 @@ struct NoteEditorView: View {
                     initialDrawing: drawing,
                     isOCRMode: $isOCRMode,
                     showGrid: $showGrid,
+                    tidyToken: tidyToken,
                     onDrawingChanged: { newDrawing in
                         drawing = newDrawing
                         scheduleSave(newDrawing)
@@ -46,6 +48,13 @@ struct NoteEditorView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItemGroup(placement: .primaryAction) {
+                Button {
+                    tidyToken += 1
+                } label: {
+                    Label("整理", systemImage: "wand.and.stars")
+                }
+                .disabled(isOCRMode)
+
                 Button {
                     showGrid.toggle()
                 } label: {

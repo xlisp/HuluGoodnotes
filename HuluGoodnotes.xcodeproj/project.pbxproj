@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B7E265F5BCB623357B278EC /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29984BE96B9CD7F91DBCB445 /* NoteListView.swift */; };
+		34D85DF14B9BB4FCF76DA803 /* GridBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420D6E42137CF4ED11448C63 /* GridBackgroundView.swift */; };
+		4A0C70BC06BC38B841A75EF1 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BA706222FE5FDE456028FB /* NoteStore.swift */; };
+		5B75C903662B64C537990FD7 /* OCRResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A746B52F8F53EFADD87764F6 /* OCRResultView.swift */; };
+		78B6FC7B0DFBC8A871A9AD7F /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB84C47B100B22DE1FB84B70 /* NoteEditorView.swift */; };
+		7B53E8FD59E71BA8E0C93F69 /* NoteMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDA2F183846E5194B5947A /* NoteMetadata.swift */; };
+		854D4EE0E4B137EC6E11BEF1 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A643F5751BDC7BE2858CB /* CanvasViewController.swift */; };
+		9962F5261AFDE6C5E9EE91BC /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13992118734C1F604C14FFDE /* OCRService.swift */; };
+		B56692823701DEA67F182011 /* EditorCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC9D998E2952FD5F15F1AC /* EditorCanvas.swift */; };
+		BBB04784D4B2763BA8F845AC /* HuluGoodnotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D87728C8FA9B2F19BD86E /* HuluGoodnotesApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A265BA97DBA4FD0E226BE6D /* HuluGoodnotes.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HuluGoodnotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13992118734C1F604C14FFDE /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
+		1FFDA2F183846E5194B5947A /* NoteMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMetadata.swift; sourceTree = "<group>"; };
+		29984BE96B9CD7F91DBCB445 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		420D6E42137CF4ED11448C63 /* GridBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBackgroundView.swift; sourceTree = "<group>"; };
+		76BA706222FE5FDE456028FB /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
+		77FC9D998E2952FD5F15F1AC /* EditorCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCanvas.swift; sourceTree = "<group>"; };
+		A746B52F8F53EFADD87764F6 /* OCRResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultView.swift; sourceTree = "<group>"; };
+		AB84C47B100B22DE1FB84B70 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
+		D51D87728C8FA9B2F19BD86E /* HuluGoodnotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuluGoodnotesApp.swift; sourceTree = "<group>"; };
+		EB9A643F5751BDC7BE2858CB /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		06369D7AFB8214C1EB59D69A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FFDA2F183846E5194B5947A /* NoteMetadata.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		06F618C6CF6CD9FD903E42CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A265BA97DBA4FD0E226BE6D /* HuluGoodnotes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22F10E2F4076FBA94AA28831 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77FC9D998E2952FD5F15F1AC /* EditorCanvas.swift */,
+				AB84C47B100B22DE1FB84B70 /* NoteEditorView.swift */,
+				29984BE96B9CD7F91DBCB445 /* NoteListView.swift */,
+				A746B52F8F53EFADD87764F6 /* OCRResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		352F99BA42067A7CC295A766 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D51D87728C8FA9B2F19BD86E /* HuluGoodnotesApp.swift */,
+				97576B2D788548A14512ACFB /* Canvas */,
+				06369D7AFB8214C1EB59D69A /* Models */,
+				6C14A0D7D194003FA791BFBC /* OCR */,
+				747CC4BAAF27B112409F2C86 /* Store */,
+				22F10E2F4076FBA94AA28831 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6C14A0D7D194003FA791BFBC /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				13992118734C1F604C14FFDE /* OCRService.swift */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		747CC4BAAF27B112409F2C86 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				76BA706222FE5FDE456028FB /* NoteStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		97576B2D788548A14512ACFB /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				EB9A643F5751BDC7BE2858CB /* CanvasViewController.swift */,
+				420D6E42137CF4ED11448C63 /* GridBackgroundView.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		DB95D1351F80D05DDDDAE23F = {
+			isa = PBXGroup;
+			children = (
+				352F99BA42067A7CC295A766 /* Sources */,
+				06F618C6CF6CD9FD903E42CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D26361C4FC71930341DBA37 /* HuluGoodnotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3463DE86D71967422CB572ED /* Build configuration list for PBXNativeTarget "HuluGoodnotes" */;
+			buildPhases = (
+				3B36A0082059D362C25B58FE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HuluGoodnotes;
+			packageProductDependencies = (
+			);
+			productName = HuluGoodnotes;
+			productReference = 0A265BA97DBA4FD0E226BE6D /* HuluGoodnotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CE48379FF8AAB34F0A25B8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0D26361C4FC71930341DBA37 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B3E56AC2880B7FDD85F70143 /* Build configuration list for PBXProject "HuluGoodnotes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = DB95D1351F80D05DDDDAE23F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D26361C4FC71930341DBA37 /* HuluGoodnotes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B36A0082059D362C25B58FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854D4EE0E4B137EC6E11BEF1 /* CanvasViewController.swift in Sources */,
+				B56692823701DEA67F182011 /* EditorCanvas.swift in Sources */,
+				34D85DF14B9BB4FCF76DA803 /* GridBackgroundView.swift in Sources */,
+				BBB04784D4B2763BA8F845AC /* HuluGoodnotesApp.swift in Sources */,
+				78B6FC7B0DFBC8A871A9AD7F /* NoteEditorView.swift in Sources */,
+				2B7E265F5BCB623357B278EC /* NoteListView.swift in Sources */,
+				7B53E8FD59E71BA8E0C93F69 /* NoteMetadata.swift in Sources */,
+				4A0C70BC06BC38B841A75EF1 /* NoteStore.swift in Sources */,
+				5B75C903662B64C537990FD7 /* OCRResultView.swift in Sources */,
+				9962F5261AFDE6C5E9EE91BC /* OCRService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		445CFD1E09A64B677F4C207D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulu.goodnotes.HuluGoodnotes;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		7F0A410E9A44A7D2C85BE5A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulu.goodnotes.HuluGoodnotes;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		8DD8AD901C8A840FB5EB68B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CB690D478974B37E9FF84C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3463DE86D71967422CB572ED /* Build configuration list for PBXNativeTarget "HuluGoodnotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F0A410E9A44A7D2C85BE5A6 /* Debug */,
+				445CFD1E09A64B677F4C207D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B3E56AC2880B7FDD85F70143 /* Build configuration list for PBXProject "HuluGoodnotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB690D478974B37E9FF84C5B /* Debug */,
+				8DD8AD901C8A840FB5EB68B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CE48379FF8AAB34F0A25B8C /* Project object */;
+}

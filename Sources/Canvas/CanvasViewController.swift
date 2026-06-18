@@ -25,6 +25,12 @@ final class CanvasViewController: UIViewController {
     /// 用户框选完成后回调，参数为框选区域内笔迹渲染出的图片。
     var onOCRRegion: ((UIImage) -> Void)?
 
+    /// "整理基准"字高。第一次整理时确定并锁定，之后再整理都按它对齐，
+    /// 避免后写的小字把基准拉低、导致已整理好的行被一起缩小。
+    var tidyStandardHeight: CGFloat?
+    /// 首次确立整理基准时回调，供上层持久化。
+    var onTidyStandardEstablished: ((CGFloat) -> Void)?
+
     private var selectionStart: CGPoint = .zero
 
     // MARK: - 生命周期
@@ -90,15 +96,30 @@ final class CanvasViewController: UIViewController {
         let current = canvasView.drawing
         guard current.strokes.count > 1 else { return }
 
-        let options = StrokeArranger.Options(
+        var options = StrokeArranger.Options(
             origin: CGPoint(x: 40, y: 60),
             maxWidth: max(200, canvasView.bounds.width - 80)
         )
-        let arranged = StrokeArranger.arrange(current, options: options)
-        // 笔画数量应保持不变；不一致说明出现异常，放弃整理。
-        guard arranged.strokes.count == current.strokes.count else { return }
+        // 已有基准则锁定字高，保证与上次整理大小一致。
+        options.targetGlyphHeight = tidyStandardHeight
 
-        applyDrawing(arranged, undo: current)
+        let result = StrokeArranger.arrange(current, options: options)
+        // 笔画数量应保持不变；不一致说明出现异常，放弃整理。
+        guard result.drawing.strokes.count == current.strokes.count else { return }
+
+        applyDrawing(result.drawing, undo: current)
+
+        // 第一次整理：把本次字高确立为基准并通知上层持久化。
+        if tidyStandardHeight == nil, result.glyphHeight > 0 {
+            tidyStandardHeight = result.glyphHeight
+            onTidyStandardEstablished?(result.glyphHeight)
+        }
+    }
+
+    /// 清除已锁定的整理基准，按当前笔迹重新确立一套基准再整理。
+    func resetTidyStandardAndTidy() {
+        tidyStandardHeight = nil
+        tidyDrawing()
     }
 
     /// 应用新的笔迹，并把反向操作登记到撤销栈（支持撤销 / 重做）。

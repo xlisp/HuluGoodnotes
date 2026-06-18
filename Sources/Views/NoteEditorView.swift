@@ -11,6 +11,7 @@ struct NoteEditorView: View {
     @State private var isOCRMode = false
     @State private var showGrid = true
     @State private var tidyToken = 0
+    @State private var resetTidyToken = 0
     @State private var isRecognizing = false
     @State private var ocrResult: OCRResult?
     @State private var saveTask: Task<Void, Never>?
@@ -23,12 +24,17 @@ struct NoteEditorView: View {
                     isOCRMode: $isOCRMode,
                     showGrid: $showGrid,
                     tidyToken: tidyToken,
+                    resetTidyToken: resetTidyToken,
+                    initialTidyHeight: note.tidyGlyphHeight,
                     onDrawingChanged: { newDrawing in
                         drawing = newDrawing
                         scheduleSave(newDrawing)
                     },
                     onOCRRegion: { image in
                         runOCR(image)
+                    },
+                    onTidyStandardEstablished: { height in
+                        store.setTidyHeight(note.id, height)
                     }
                 )
                 .ignoresSafeArea(edges: .bottom)
@@ -54,6 +60,13 @@ struct NoteEditorView: View {
                     Label("整理", systemImage: "wand.and.stars")
                 }
                 .disabled(isOCRMode)
+                .contextMenu {
+                    Button {
+                        resetTidyToken += 1
+                    } label: {
+                        Label("重新设定整理基准", systemImage: "arrow.counterclockwise")
+                    }
+                }
 
                 Button {
                     showGrid.toggle()

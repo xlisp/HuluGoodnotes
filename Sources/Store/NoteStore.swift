@@ -70,6 +70,13 @@ final class NoteStore: ObservableObject {
         persistIndex()
     }
 
+    /// 记录某条笔记的整理基准字高（首次整理时确立）。
+    func setTidyHeight(_ id: UUID, _ height: CGFloat) {
+        guard let i = notes.firstIndex(where: { $0.id == id }) else { return }
+        notes[i].tidyGlyphHeight = height
+        persistIndex()
+    }
+
     func rename(_ id: UUID, to title: String) {
         guard let i = notes.firstIndex(where: { $0.id == id }) else { return }
         notes[i].title = title
